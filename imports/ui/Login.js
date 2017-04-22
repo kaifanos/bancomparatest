@@ -17,7 +17,7 @@ export default class Login extends React.Component {
 
     Meteor.loginWithPassword({email}, password, (err) => {
       if (err) {
-        this.setState({error: 'Unable to login. Check email and password.'});
+        this.setState({error: 'Imposible Acceder, comprueba tu correo y Contraseña'});
       } else {
         this.setState({error: ''});
       }
@@ -27,7 +27,7 @@ export default class Login extends React.Component {
     return (
       <div className="boxed-view">
         <div className="boxed-view__box">
-          <h1>Short Lnk</h1>
+          <h1>Netflux</h1>
 
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
@@ -37,7 +37,7 @@ export default class Login extends React.Component {
             <button className="button">Login</button>
           </form>
 
-          <Link to="/signup">Have an account?</Link>
+          <Link to="/signup">Tienes una Cuenta?</Link>
         </div>
       </div>
     );
